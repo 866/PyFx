@@ -23,22 +23,41 @@ class TimeFrame(object):
         for unit in self.container:
             range_sum += unit[1].getHL()
         return range_sum/len(self)
-
+    
+    def get_monthly_distribution(self):
+        """
+        Returns volatility(High-Low) distribution by days in list [MO, TU, WE, TH, FR]
+        Warning: works only with monthly ticks!
+        """
+        m_vol = 12*[0]
+        m_num = 12*[0]
+        m_dist_vol = 12*[0]
+        for elem in self.container:
+            m_num[elem[0].month] += 1
+            m_vol[elem[0].month] += elem[1].getHL()
+        for i in range(5):
+            if not m_num[i] == 0:
+                m_dist_vol[i] = m_vol[i]/m_num[i]
+        print(m_vol)
+        print(m_num)
+        return m_dist_vol        
+        
     def get_daily_distribution(self):
         """
         Returns volatility(High-Low) distribution by days in list [MO, TU, WE, TH, FR]
         Warning: works only with daily ticks!
         """
-        day_vol = 5*[0]
-        day_num = 5*[0]
-        day_dist_vol = 5*[0]
+        day_vol = 7*[0]
+        day_num = 7*[0]
+        day_dist_vol = 7*[0]
         for elem in self.container:
-            if elem[0].weekday() <= 4:
-                day_num[elem[0].weekday()] += 1
-                day_vol[elem[0].weekday()] += elem[1].getHL()
-        for i in range(5):
+            day_num[elem[0].weekday()] += 1
+            day_vol[elem[0].weekday()] += elem[1].getHL()
+        for i in range(7):
             if not day_num[i] == 0:
                 day_dist_vol[i] = day_vol[i]/day_num[i]
+        print(day_vol)
+        print(day_num)
         return day_dist_vol
 
     def get_hourly_distribution(self):

@@ -6,8 +6,8 @@ class Candle:
         self.High = High
         self.Low = Low
         self.Close = Close
-        self.Open = Open
-   
+        self.Volume = Volume
+
     def getCO(self):
         """ Returns Close-Open """
         return self.Close-self.Open
@@ -23,3 +23,12 @@ class Candle:
     def getHO(self):
         """ Returns High-Open """
         return self.High-self.Open
+
+    def printData(self):
+        """ Prints candle properties """
+        print("\tDatetime: " + str(self.DateTime) +
+            "\n\tOpen: " + str(self.Open) +
+            "\n\tHigh: " + str(self.High) +
+            "\n\tLow: " + str(self.Low) +
+            "\n\tClose: " + str(self.Close) +
+            "\n\tVolume: " + str(self.Volume))

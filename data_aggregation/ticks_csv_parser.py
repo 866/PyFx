@@ -19,7 +19,8 @@ def parse_csv(filename):
                                 int(row[0][17:19]), #second=0
                                 int(float(row[0][20:]))) #microsecond=0
                 if time not in timeset:
-                    candle = candle_class.Candle(time,float(row[1]),
+                    candle = candle_class.Candle(time,
+                                            float(row[1]),
                                             float(row[2]),
                                             float(row[3]),
                                             float(row[4]),
