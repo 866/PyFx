@@ -23,9 +23,3 @@ class Candle:
     def getHO(self):
         """ Returns High-Open """
         return self.High-self.Open
-
-def get_average_range(timeframe):
-    range_sum = 0
-    for unit in timeframe:
-        range_sum += unit[1].getHL()
-    return range_sum/len(timeframe)
