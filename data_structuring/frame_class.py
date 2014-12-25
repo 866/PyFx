@@ -1,4 +1,3 @@
-import datetime
 class TimeFrame(object):
     """ Representation of an ordered set of candles """
     def __init__(self, container=None):
@@ -18,10 +17,16 @@ class TimeFrame(object):
     def __len__(self):
         return len(self.container)
 
+    def append(self, candle):
+        self.container.append(candle)
+
     def get_average_range(self):
+        """
+        Returns average HL for whole set
+        """
         range_sum = 0
         for unit in self.container:
-            range_sum += unit[1].getHL()
+            range_sum += unit.getHL()
         return range_sum/len(self)
     
     def get_monthly_distribution(self):
@@ -33,9 +38,9 @@ class TimeFrame(object):
         m_num = 12*[0]
         m_dist_vol = 12*[0]
         for elem in self.container:
-            m_num[elem[0].month] += 1
-            m_vol[elem[0].month] += elem[1].getHL()
-        for i in range(5):
+            m_num[elem.DateTime.month-1] += 1
+            m_vol[elem.DateTime.month-1] += elem.getHL()
+        for i in range(12):
             if not m_num[i] == 0:
                 m_dist_vol[i] = m_vol[i]/m_num[i]
         print(m_vol)
@@ -51,8 +56,8 @@ class TimeFrame(object):
         day_num = 7*[0]
         day_dist_vol = 7*[0]
         for elem in self.container:
-            day_num[elem[0].weekday()] += 1
-            day_vol[elem[0].weekday()] += elem[1].getHL()
+            day_num[elem.DateTime.weekday()] += 1
+            day_vol[elem.DateTime.weekday()] += elem.getHL()
         for i in range(7):
             if not day_num[i] == 0:
                 day_dist_vol[i] = day_vol[i]/day_num[i]
@@ -69,11 +74,52 @@ class TimeFrame(object):
         h_num = 24*[0]
         h_dist_vol = 24*[0]
         for elem in self.container:
-            h_num[elem[0].hour] += 1
-            h_vol[elem[0].hour] += elem[1].getHL()
+            h_num[elem.DateTime.hour] += 1
+            h_vol[elem.DateTime.hour] += elem.getHL()
         for i in range(24):
             if not h_num[i] == 0:
                 h_dist_vol[i] = h_vol[i]/h_num[i]
         return h_dist_vol
 
+    def get_HL_distribution(self):
+        """
+        Works only with hour ticks
+        """
+        hour_dist = 24*[0]
+        min, max = 0, 0
+        curr_day = self[0].container.DateTime.day
+        for i in range(len(self.container)):
+                if self[i].container.DateTime.day == curr_day:
+                    if self[i].container.High > self[max].container.High:
+                        max = i
+                    if self[i].container.Low < self[max].container.Low:
+                        min = i
+                else:
+                    hour_dist[self[min].container.DateTime.hour] += 1
+                    hour_dist[self[max].container.DateTime.hour] += 1
+                    curr_day = self[i].container.DateTime.day
+                    min = i
+                    max = i
+        return hour_dist
+
+def cut_by_OC_param(tf, threshold=None, param="e"):#e means exceeds
+    import math
+    if param == "e":
+        sign = 1
+    else:
+        sign = -1
+    if (threshold==None):
+        threshold = tf.get_average_range();
+    cut = TimeFrame()
+    for element in tf.container:
+        if math.fabs(element.getCO())*sign > threshold*sign:
+            cut.append(element)
+    return cut
+
+def only_working_days(tf):
+    wtf = TimeFrame()
+    for element in tf.container:
+        if element.DateTime.weekday() <= 4:
+            wtf.append(element)
+    return wtf
 
