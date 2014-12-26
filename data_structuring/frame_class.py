@@ -102,14 +102,24 @@ class TimeFrame(object):
                     max = i
         return hour_dist
 
-def cut_by_OC_param(tf, threshold=None, param="e"):#e means exceeds
+    def get_avr_OC_HL_ratio(self):
+        import math
+        ratio_sum, num = 0, 0
+        for element in self.container:
+            if element.getHL() > 0:
+                ratio_sum = math.fabs(element.getCO())/element.getHL()
+                num += 1
+        print(ratio_sum, num)
+        return ratio_sum/num
+
+def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
     import math
     if param == "e":
         sign = 1
     else:
         sign = -1
-    if (threshold==None):
-        threshold = tf.get_average_range();
+    if threshold==None:
+        threshold = tf.get_average_range()
     cut = TimeFrame()
     for element in tf.container:
         if math.fabs(element.getCO())*sign > threshold*sign:
@@ -122,4 +132,12 @@ def only_working_days(tf):
         if element.DateTime.weekday() <= 4:
             wtf.append(element)
     return wtf
+
+def cut_by_OC_range(tf, threshold1, threshold2):
+    import math
+    cut = TimeFrame()
+    for element in tf.container:
+        if threshold1 < math.fabs(element.getCO()) < threshold2:
+            cut.append(element)
+    return cut
 
