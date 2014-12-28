@@ -24,6 +24,14 @@ class Candle:
         """ Returns High-Open """
         return self.High-self.Open
 
+    def getCL(self):
+        """ Returns Close-Low """
+        return self.Close-self.Low
+
+    def getHC(self):
+        """ Returns High-Close """
+        return self.High-self.Close
+
     def printData(self):
         """ Prints candle properties """
         print("\tDatetime: " + str(self.DateTime) +

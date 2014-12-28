@@ -20,7 +20,17 @@ class TimeFrame(object):
     def append(self, candle):
         self.container.append(candle)
 
-    def get_average_range(self):
+    def get_average_OC_range(self):
+        """
+        Returns average OC for whole set
+        """
+        import math
+        range_sum = 0
+        for unit in self.container:
+            range_sum += math.fabs(unit.getCO())
+        return range_sum/len(self)
+
+    def get_average_HL_range(self):
         """
         Returns average HL for whole set
         """
@@ -28,6 +38,7 @@ class TimeFrame(object):
         for unit in self.container:
             range_sum += unit.getHL()
         return range_sum/len(self)
+
     
     def get_monthly_distribution(self):
         """
@@ -46,8 +57,8 @@ class TimeFrame(object):
         print(m_vol)
         print(m_num)
         return m_dist_vol        
-        
-    def get_daily_distribution(self):
+
+    def get_weekdaily_distribution(self):
         """
         Returns volatility(High-Low) distribution by days in list [MO, TU, WE, TH, FR]
         Warning: works only with daily ticks!
@@ -81,9 +92,27 @@ class TimeFrame(object):
                 h_dist_vol[i] = h_vol[i]/h_num[i]
         return h_dist_vol
 
-    def get_HL_distribution(self):
+    def get_minutely_distribution(self):
+        """
+        Returns volatility(High-Low) distribution by minutes in list [0,1,2,3,...,59]
+        Warning: works only with minutely ticks!
+        """
+        m_vol = 60*[0]
+        m_num = 60*[0]
+        m_dist_vol = 60*[0]
+        for elem in self.container:
+            m_num[elem.DateTime.minute] += 1
+            m_vol[elem.DateTime.minute] += elem.getHL()
+        for i in range(60):
+            if not m_num[i] == 0:
+                m_dist_vol[i] = m_vol[i]/m_num[i]
+        return m_dist_vol
+
+    def get_HL_hourly_distribution(self):
         """
         Works only with hour ticks
+        Returns a list with 24 elements. Each element represent number of Lows/Highs for
+        corresponding hour in a frame
         """
         hour_dist = 24*[0]
         min, max = 0, 0
@@ -110,7 +139,27 @@ class TimeFrame(object):
                 ratio_sum = math.fabs(element.getCO())/element.getHL()
                 num += 1
         print(ratio_sum, num)
-        return ratio_sum/num
+        if num == 0:
+            res = 0
+        else:
+            res = ratio_sum/num
+        return res
+
+    def get_avr_OC_HL_dist(self):
+        dist_sum, num = 0, 0
+        for element in self.container:
+            if element.getCO() > 0:
+                dist_sum += element.getHC()
+                dist_sum += element.getOL()
+            else:
+                dist_sum += element.getHO()
+                dist_sum += element.getCL()
+            num += 2
+        if num == 0:
+            res = 0
+        else:
+            res = dist_sum/num
+        return res
 
 def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
     import math
@@ -119,7 +168,7 @@ def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
     else:
         sign = -1
     if threshold==None:
-        threshold = tf.get_average_range()
+        threshold = tf.get_average_OC_range()
     cut = TimeFrame()
     for element in tf.container:
         if math.fabs(element.getCO())*sign > threshold*sign:
@@ -138,6 +187,13 @@ def cut_by_OC_range(tf, threshold1, threshold2):
     cut = TimeFrame()
     for element in tf.container:
         if threshold1 < math.fabs(element.getCO()) < threshold2:
+            cut.append(element)
+    return cut
+
+def cut_by_HL_range(tf, threshold1, threshold2):
+    cut = TimeFrame()
+    for element in tf.container:
+        if threshold1 < element.getHL() < threshold2:
             cut.append(element)
     return cut
 

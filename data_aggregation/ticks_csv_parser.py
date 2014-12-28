@@ -6,7 +6,7 @@ from datetime import datetime
 def parse_csv_dukascopy(filename):
     try:
         with open(filename) as csvfile:
-            strings = csv.reader(csvfile,delimiter=',')
+            strings = csv.reader(csvfile, delimiter=',')
             frame = []
             timeset = set()
             for row in strings:
