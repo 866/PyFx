@@ -1,9 +1,11 @@
 class TimeFrame(object):
     """ Representation of an ordered set of candles """
-    def __init__(self, container=None):
+    def __init__(self, container=None, symbol=None, period=None):
         if container is None:
             container = []
         self.container = container
+        self.symbol = str(symbol)
+        self.period = str(period)
 
     def __str__(self):
         return str(self.container)
@@ -16,6 +18,10 @@ class TimeFrame(object):
 
     def __len__(self):
         return len(self.container)
+
+    def set_description(self, symbol=None, period=None):
+        self.symbol = str(symbol)
+        self.period = str(period)
 
     def append(self, candle):
         self.container.append(candle)
@@ -161,6 +167,51 @@ class TimeFrame(object):
             res = dist_sum/num
         return res
 
+    def get_O_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.Open)
+        return res
+
+    def get_H_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.High)
+        return res
+
+    def get_L_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.Low)
+        return res
+
+    def get_C_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.Close)
+        return res
+
+    def get_DT_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.DateTime)
+        return res
+
+    def is_in_frame(self, date):
+        for element in self.container:
+            if date == element.DateTime:
+                return True
+        else:
+            return False
+
+    def print_description(self):
+        print("Timeframe data description")
+        print("Symbol: " + self.symbol)
+        print("Period: " + self.period)
+        print("Length: " + str(len(self)))
+        print("First-Last frame: " + str(self.container[0].DateTime) + " -- " +
+              str(self.container[len(self.container)-1].DateTime))
+
 def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
     import math
     if param == "e":
@@ -196,4 +247,14 @@ def cut_by_HL_range(tf, threshold1, threshold2):
         if threshold1 < element.getHL() < threshold2:
             cut.append(element)
     return cut
+
+def cut_by_datetime(tf, datetime_begin, datetime_end=None):
+    import datetime
+    if datetime_end is None:
+        datetime_end = datetime.datetime.now()
+    res = TimeFrame()
+    for element in tf.container:
+        if datetime_begin <= element.DateTime <= datetime_end:
+            res.append(element)
+    return res
 

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c31be98c-77a3-4f1a-bed9-e715ff776565" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sandbox/EURUSD1.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainAPI/EURUSD1440big.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sandbox/EURUSD1440big.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sandbox/eursmp.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainAPI/plotting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/bar_chart.py" afterPath="$PROJECT_DIR$/sandbox/bar_chart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_structuring/candle_class.py" afterPath="$PROJECT_DIR$/data_structuring/candle_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainAPI/eursmp.csv" afterPath="$PROJECT_DIR$/mainAPI/eursmp.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sandbox/stooqdownload.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sandbox/bar_chart.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/EURUSD1440.csv" afterPath="$PROJECT_DIR$/sandbox/EURUSD1440.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/EURUSD43200.csv" afterPath="$PROJECT_DIR$/sandbox/EURUSD43200.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/EURUSD60.csv" afterPath="$PROJECT_DIR$/sandbox/EURUSD60.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/EURUSD_H.csv" afterPath="$PROJECT_DIR$/sandbox/EURUSD_H.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainAPI/__init__.py" afterPath="$PROJECT_DIR$/mainAPI/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_structuring/frame_class.py" afterPath="$PROJECT_DIR$/data_structuring/frame_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/ratio_wtt_closing.py" afterPath="$PROJECT_DIR$/sandbox/ratio_wtt_closing.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py" afterPath="$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py" />
@@ -37,89 +36,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="eursmp.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainAPI/eursmp.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
-              <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plotting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainAPI/plotting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="candle_class.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.392857" vertical-offset="201" max-vertical-offset="846">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="705">
               <caret line="18" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frame_class.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_structuring/frame_class.py">
+      <file leaf-file-name="ticks_csv_parser.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="954">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.09809663" vertical-offset="1013" max-vertical-offset="2265">
+              <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
               <folding>
-                <element signature="e#129#212#0" expanded="false" />
-                <element signature="e#245#271#0" expanded="false" />
-                <element signature="e#305#331#0" expanded="false" />
-                <element signature="e#373#410#0" expanded="false" />
-                <element signature="e#443#469#0" expanded="false" />
-                <element signature="e#509#538#0" expanded="false" />
-                <element signature="e#584#802#0" expanded="false" />
-                <element signature="e#848#1035#0" expanded="false" />
-                <element signature="e#1090#1633#0" expanded="false" />
-                <element signature="e#1090#1240#1" expanded="false" />
-                <element signature="e#1693#2258#0" expanded="false" />
-                <element signature="e#1693#1841#1" expanded="false" />
-                <element signature="e#2307#2797#0" expanded="false" />
-                <element signature="e#2307#2452#1" expanded="false" />
-                <element signature="e#2848#3347#0" expanded="false" />
-                <element signature="e#2848#2998#1" expanded="false" />
-                <element signature="e#3399#4300#0" expanded="false" />
-                <element signature="e#3399#3576#1" expanded="false" />
-                <element signature="e#4345#4693#0" expanded="false" />
-                <element signature="e#4737#5152#0" expanded="false" />
-                <element signature="e#5226#5536#0" expanded="false" />
-                <element signature="e#5569#5710#0" expanded="false" />
-                <element signature="e#5998#6149#0" expanded="false" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EURUSD1440big.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440big.csv">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainAPI/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="197219" max-vertical-offset="197838">
-              <caret line="10984" column="50" selection-start-line="10984" selection-start-column="50" selection-end-line="10984" selection-end-column="50" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
+              <caret line="4" column="16" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="41" />
+              <folding>
+                <element signature="e#87#108#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ratio_wtt_closing.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sandbox/ratio_wtt_closing.py">
+      <file leaf-file-name="stooqdownload.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sandbox/stooqdownload.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49624062" vertical-offset="0" max-vertical-offset="594">
-              <caret line="11" column="16" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="540">
+              <caret line="1" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="45" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#89#110#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,19 +104,25 @@
         <option value="$PROJECT_DIR$/mainAPI/EURUSD1440.csv" />
         <option value="$PROJECT_DIR$/sandbox/EURUSD43200.csv" />
         <option value="$PROJECT_DIR$/sandbox/bar_chart.py" />
-        <option value="$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py" />
         <option value="$PROJECT_DIR$/sandbox/eursmp.csv" />
         <option value="$PROJECT_DIR$/mainAPI/eursmp.csv" />
         <option value="$PROJECT_DIR$/data_structuring/candle_class.py" />
         <option value="$PROJECT_DIR$/mainAPI/plotting.py" />
-        <option value="$PROJECT_DIR$/data_structuring/frame_class.py" />
+        <option value="$PROJECT_DIR$/sandbox/EURUSD1440Metatrader.csv" />
+        <option value="$PROJECT_DIR$/sandbox/EURUSD1440Dukascopy.csv" />
         <option value="$PROJECT_DIR$/sandbox/ratio_wtt_closing.py" />
+        <option value="$PROJECT_DIR$/mainAPI/__init__.py" />
+        <option value="$PROJECT_DIR$/data_structuring/frame_class.py" />
+        <option value="$PROJECT_DIR$/sandbox/stooqdownload.py" />
+        <option value="$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="744" />
+    <option name="x" value="-1" />
+    <option name="y" value="-1" />
+    <option name="width" value="1922" />
+    <option name="height" value="1061" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -200,6 +163,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -223,6 +187,16 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyFx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyFx" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,9 +242,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyFx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyFx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +283,7 @@
       <recent name="$PROJECT_DIR$/sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ratio_wtt_closing">
+  <component name="RunManager" selected="Python.stooqdownload">
     <configuration default="false" name="SentdexPlotChart" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -348,6 +335,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PyFx" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox/ratio_wtt_closing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="stooqdownload" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sandbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyFx" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox/stooqdownload.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -476,16 +482,18 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.SentdexPlotChart" />
       <item index="1" class="java.lang.String" itemvalue="Python.bar_chart" />
       <item index="2" class="java.lang.String" itemvalue="Python.ratio_wtt_closing" />
+      <item index="3" class="java.lang.String" itemvalue="Python.stooqdownload" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.ratio_wtt_closing" />
-        <item index="1" class="java.lang.String" itemvalue="Python.bar_chart" />
-        <item index="2" class="java.lang.String" itemvalue="Python.SentdexPlotChart" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.stooqdownload" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ratio_wtt_closing" />
+        <item index="2" class="java.lang.String" itemvalue="Python.bar_chart" />
+        <item index="3" class="java.lang.String" itemvalue="Python.SentdexPlotChart" />
       </list>
     </recent_temporary>
   </component>
@@ -510,29 +518,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="744" extended-state="0" />
+    <frame x="-1" y="-1" width="1922" height="1061" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6390169" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47678018" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26272067" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34055728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23973607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32872504" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33956388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -556,68 +564,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py</url>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mainAPI/EURUSD_D.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="33876" max-vertical-offset="34002">
-          <caret line="1882" column="39" selection-start-line="1879" selection-start-column="0" selection-end-line="1883" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/eursmp.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="702">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="720">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_structuring/frame_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="1530">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/SentdexPlotChart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1030" max-vertical-offset="3852">
-          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/EURUSD_H.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="614736" max-vertical-offset="614844">
-          <caret line="34152" column="0" selection-start-line="34152" selection-start-column="0" selection-end-line="34152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainAPI/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="126">
@@ -629,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="34002">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1206">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="34002">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1242">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="33876" max-vertical-offset="34002">
           <caret line="1882" column="66" selection-start-line="1882" selection-start-column="66" selection-end-line="1882" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,13 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainAPI/EURUSD_H.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8269231" vertical-offset="614220" max-vertical-offset="614844">
@@ -864,31 +808,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1728">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/SentdexPlotChart.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1030" max-vertical-offset="3852">
           <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/bar_chart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="522">
-          <caret line="12" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
           <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,23 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="33619" max-vertical-offset="34002">
           <caret line="1881" column="62" selection-start-line="1880" selection-start-column="0" selection-end-line="1882" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36972">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440big.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="197219" max-vertical-offset="197838">
-          <caret line="10984" column="50" selection-start-line="10984" selection-start-column="50" selection-end-line="10984" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,57 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="197838">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_structuring/frame_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="954">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#129#212#0" expanded="false" />
-            <element signature="e#245#271#0" expanded="false" />
-            <element signature="e#305#331#0" expanded="false" />
-            <element signature="e#373#410#0" expanded="false" />
-            <element signature="e#443#469#0" expanded="false" />
-            <element signature="e#509#538#0" expanded="false" />
-            <element signature="e#584#802#0" expanded="false" />
-            <element signature="e#848#1035#0" expanded="false" />
-            <element signature="e#1090#1633#0" expanded="false" />
-            <element signature="e#1090#1240#1" expanded="false" />
-            <element signature="e#1693#2258#0" expanded="false" />
-            <element signature="e#1693#1841#1" expanded="false" />
-            <element signature="e#2307#2797#0" expanded="false" />
-            <element signature="e#2307#2452#1" expanded="false" />
-            <element signature="e#2848#3347#0" expanded="false" />
-            <element signature="e#2848#2998#1" expanded="false" />
-            <element signature="e#3399#4300#0" expanded="false" />
-            <element signature="e#3399#3576#1" expanded="false" />
-            <element signature="e#4345#4693#0" expanded="false" />
-            <element signature="e#4737#5152#0" expanded="false" />
-            <element signature="e#5226#5536#0" expanded="false" />
-            <element signature="e#5569#5710#0" expanded="false" />
-            <element signature="e#5998#6149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.392857" vertical-offset="201" max-vertical-offset="846">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/plotting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -986,16 +840,127 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
           <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1247971765/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="53377" max-vertical-offset="86385">
+          <caret line="3572" column="8" selection-start-line="3572" selection-start-column="8" selection-end-line="3572" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36972">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440Metatrader.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="960">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="32" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440Dukascopy.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6855346" vertical-offset="921" max-vertical-offset="1815">
+          <caret line="115" column="62" selection-start-line="115" selection-start-column="62" selection-end-line="115" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD1440big.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.584906" vertical-offset="159711" max-vertical-offset="164865">
+          <caret line="10984" column="50" selection-start-line="10984" selection-start-column="50" selection-end-line="10984" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/ratio_wtt_closing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49624062" vertical-offset="0" max-vertical-offset="594">
-          <caret line="11" column="16" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.5031447" vertical-offset="0" max-vertical-offset="495">
+          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/metatrader/Daily/USDJPY.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11790" max-vertical-offset="30810">
+          <caret line="756" column="25" selection-start-line="756" selection-start-column="25" selection-end-line="756" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/metatrader/Daily/EURUSD.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="164865">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/metatrader/Daily/GBPUSD.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="83505">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainAPI/plotting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="705">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_structuring/frame_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0440252" vertical-offset="813" max-vertical-offset="1290">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD60.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30810">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/stooqdownload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="1" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="45" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#89#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainAPI/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="16" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <element signature="e#87#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09809663" vertical-offset="1013" max-vertical-offset="2265">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

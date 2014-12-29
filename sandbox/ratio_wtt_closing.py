@@ -3,7 +3,7 @@ import data_structuring.frame_class as fc
 from mainAPI.plotting import plot_distribution
 import math
 
-x = fc.only_working_days(tcp.parse_csv_metatrader("EURUSD1440.csv"))
+x = fc.only_working_days(tcp.parse_csv_dukascopy("EURUSD1440Dukascopy.csv"))
 num_of_bars = 30
 avr_range = x.get_average_HL_range()
 left_bound = 0
