@@ -32,7 +32,7 @@ class Candle:
         """ Returns High-Close """
         return self.High-self.Close
 
-    def printData(self):
+    def print_description(self):
         """ Prints candle properties """
         print("\tDatetime: " + str(self.DateTime) +
             "\n\tOpen: " + str(self.Open) +

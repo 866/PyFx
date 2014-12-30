@@ -70,16 +70,39 @@ def parse_csv_metatrader(filename):
     except IOError:
         print("Error opening file "+filename)
 
-#TODO: make function compatible with stooq format
-def parse_txt_stooq(filename):
+def parse_txt_stooq_daily(filename, period=None, symbol=None):
     try:
         with open(filename) as csvfile:
             strings = csv.reader(csvfile, delimiter=',')
             frame = []
             timeset = set()
+            next(strings)
             for row in strings:
                 # CSV format YYYY-MM-DD
-                time = datetime.strptime(row[0]+row[1], "%Y.%m.%d%H:%M")
+                time = datetime.strptime(row[0], "%Y%m%d")
+                if time not in timeset:
+                    candle = candle_class.Candle(time,
+                                                 float(row[1]),
+                                                 float(row[2]),
+                                                 float(row[3]),
+                                                 float(row[4]),
+                                                 float(row[5]))
+                    timeset.add(time)
+                    frame.append(candle)
+            return frame_class.TimeFrame(frame, symbol=symbol, period=period)
+    except IOError:
+        print("Error opening file "+filename)
+
+def parse_txt_stooq_hourly(filename, period=None, symbol=None):
+    try:
+        with open(filename) as csvfile:
+            strings = csv.reader(csvfile, delimiter=',')
+            frame = []
+            timeset = set()
+            next(strings)
+            for row in strings:
+                # CSV format YYYY-MM-DD
+                time = datetime.strptime(row[0]+row[1], "%Y-%m-%d%H:%M:%S")
                 if time not in timeset:
                     candle = candle_class.Candle(time,
                                                  float(row[2]),
@@ -89,7 +112,7 @@ def parse_txt_stooq(filename):
                                                  float(row[6]))
                     timeset.add(time)
                     frame.append(candle)
-            return frame_class.TimeFrame(frame)
+            return frame_class.TimeFrame(frame, symbol=symbol, period=period)
     except IOError:
         print("Error opening file "+filename)
 

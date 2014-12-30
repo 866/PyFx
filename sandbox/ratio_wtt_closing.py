@@ -25,4 +25,4 @@ print("Left bound: " + str(left_bound) + " Right bound: " + str(right_bound))
 print("Distribution",  res_list)
 
 plot_distribution(res_list, res_list_x)
-plot_distribution(x.get_weekdaily_distribution())
+plot_distribution(x.get_weekdaily_distribution(), ["MO", "TU", "WE", "TH", "FR", "SA", "SU"])

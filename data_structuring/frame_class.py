@@ -78,8 +78,6 @@ class TimeFrame(object):
         for i in range(7):
             if not day_num[i] == 0:
                 day_dist_vol[i] = day_vol[i]/day_num[i]
-        print(day_vol)
-        print(day_num)
         return day_dist_vol
 
     def get_hourly_distribution(self):
@@ -144,7 +142,6 @@ class TimeFrame(object):
             if element.getHL() > 0:
                 ratio_sum = math.fabs(element.getCO())/element.getHL()
                 num += 1
-        print(ratio_sum, num)
         if num == 0:
             res = 0
         else:
@@ -205,12 +202,12 @@ class TimeFrame(object):
             return False
 
     def print_description(self):
-        print("Timeframe data description")
-        print("Symbol: " + self.symbol)
-        print("Period: " + self.period)
-        print("Length: " + str(len(self)))
-        print("First-Last frame: " + str(self.container[0].DateTime) + " -- " +
-              str(self.container[len(self.container)-1].DateTime))
+        print("\tTimeframe data description")
+        print("\tSymbol: " + self.symbol)
+        print("\tPeriod: " + self.period)
+        print("\tLength: " + str(len(self)))
+        print("\tFirst-Last frame: " + str(self.container[0].DateTime) + " -- " +
+            str(self.container[len(self.container)-1].DateTime))
 
 def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
     import math
@@ -220,29 +217,29 @@ def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
         sign = -1
     if threshold==None:
         threshold = tf.get_average_OC_range()
-    cut = TimeFrame()
+    cut = TimeFrame(symbol=tf.symbol, period=tf.period)
     for element in tf.container:
         if math.fabs(element.getCO())*sign > threshold*sign:
             cut.append(element)
     return cut
 
 def only_working_days(tf):
-    wtf = TimeFrame()
+    cut = TimeFrame(symbol=tf.symbol, period=tf.period)
     for element in tf.container:
         if element.DateTime.weekday() <= 4:
-            wtf.append(element)
-    return wtf
+            cut.append(element)
+    return cut
 
 def cut_by_OC_range(tf, threshold1, threshold2):
     import math
-    cut = TimeFrame()
+    cut = TimeFrame(symbol=tf.symbol, period=tf.period)
     for element in tf.container:
         if threshold1 < math.fabs(element.getCO()) < threshold2:
             cut.append(element)
     return cut
 
 def cut_by_HL_range(tf, threshold1, threshold2):
-    cut = TimeFrame()
+    cut = TimeFrame(symbol=tf.symbol, period=tf.period)
     for element in tf.container:
         if threshold1 < element.getHL() < threshold2:
             cut.append(element)
@@ -252,9 +249,9 @@ def cut_by_datetime(tf, datetime_begin, datetime_end=None):
     import datetime
     if datetime_end is None:
         datetime_end = datetime.datetime.now()
-    res = TimeFrame()
+    cut = TimeFrame(symbol=tf.symbol, period=tf.period)
     for element in tf.container:
         if datetime_begin <= element.DateTime <= datetime_end:
-            res.append(element)
-    return res
+            cut.append(element)
+    return cut
 
