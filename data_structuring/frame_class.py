@@ -195,11 +195,18 @@ class TimeFrame(object):
         return res
 
     def is_in_frame(self, date):
+        """
+        :param date:
+        datetime.datetime format
+        :return:
+        candle if it is found for given datetime
+        None if it is not found
+        """
         for element in self.container:
             if date == element.DateTime:
-                return True
+                return element
         else:
-            return False
+            return None
 
     def print_description(self):
         print("\tTimeframe data description")
@@ -255,3 +262,19 @@ def cut_by_datetime(tf, datetime_begin, datetime_end=None):
             cut.append(element)
     return cut
 
+def mutual_time_frames(tf1, tf2):
+    res_tf1 = TimeFrame(symbol=tf1.symbol, period=tf1.period)
+    res_tf2 = TimeFrame(symbol=tf2.symbol, period=tf2.period)
+    if len(tf1)<len(tf2):
+        for element in tf1.container:
+            res_iif = tf2.is_in_frame(element.DateTime)
+            if res_iif is not None:
+                res_tf1.append(element)
+                res_tf2.append(resiif)
+    else:
+        for element in tf2.container:
+            res_iif = tf1.is_in_frame(element.DateTime)
+            if res_iif is not None:
+                res_tf1.append(res_iif)
+                res_tf2.append(element)
+    return res_tf1, res_tf2
