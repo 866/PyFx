@@ -96,6 +96,26 @@ class TimeFrame(object):
                 h_dist_vol[i] = h_vol[i]/h_num[i]
         return h_dist_vol
 
+    def get_O_distribution_by_hour(self):
+        """
+        :return:
+        Distribution of taking open price by hour
+        Works only on the hour frames!
+        """
+        res = 24*[0]
+        i, container, tag = 0, self.container, 0
+        while container[i].DateTime.hour == 0:
+            i += 1
+        while not i == len(self):
+            if container[i].DateTime.hour == 0:
+                tag = container[i].Open
+                res[0] += 1
+            else:
+                if container[i].Low < tag < container[i].High:
+                    res[container[i].DateTime.hour] += 1
+            i += 1
+        return res
+
     def get_minutely_distribution(self):
         """
         Returns volatility(High-Low) distribution by minutes in list [0,1,2,3,...,59]
@@ -148,7 +168,7 @@ class TimeFrame(object):
             res = ratio_sum/num
         return res
 
-    def get_avr_OC_HL_dist(self):
+    def get_avr_OC_HL_distance(self):
         dist_sum, num = 0, 0
         for element in self.container:
             if element.getCO() > 0:
@@ -188,25 +208,48 @@ class TimeFrame(object):
             res.append(element.Close)
         return res
 
+    def get_CO_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.getCO())
+        return res
+
     def get_DT_list(self):
         res = []
         for element in self.container:
             res.append(element.DateTime)
         return res
 
-    def is_in_frame(self, date):
+    def is_in_frame(self, date, begin=None):
         """
         :param date:
         datetime.datetime format
+        itr - iterator, from which algorithm begins to search for the element.
+        if it is None - algorithm searches from the beginning
         :return:
         candle if it is found for given datetime
         None if it is not found
         """
-        for element in self.container:
-            if date == element.DateTime:
-                return element
+        import copy
+        if begin is None:
+            itr = iter(self.container)
         else:
-            return None
+            itr = copy.copy(begin)
+        stop = False
+        element = None
+        while not stop:
+            try:
+                element = next(itr)
+                if element.DateTime == date:
+                    break
+                elif element.DateTime > date:
+                    raise StopIteration
+            except StopIteration:
+                stop = True
+        if stop is True:
+            return None, begin
+        else:
+            return element, itr
 
     def print_description(self):
         print("\tTimeframe data description")
@@ -216,13 +259,31 @@ class TimeFrame(object):
         print("\tFirst-Last frame: " + str(self.container[0].DateTime) + " -- " +
             str(self.container[len(self.container)-1].DateTime))
 
+    def exclude_candle(self, beg, length): #TODO: needs to be checked
+        import data_structuring.candle_class as cc
+        High = self.container[beg].High
+        Low = self.container[beg].Low
+        Volume = self.container[beg].Volume
+        for element in self[beg+1, length].container:
+            Volume += element.Volume
+            if High < element.High:
+                High = element.High
+            if Low > element.Low:
+                Low = element.Low
+        return cc.Candle(self.container[beg].DateTime,
+                         self.container[beg].Open,
+                         High,
+                         Low,
+                         self.container[beg+length-1].Close,
+                         Volume)
+
 def cut_by_OC_point(tf, threshold=None, param="e"):#e means exceeds
     import math
     if param == "e":
         sign = 1
     else:
         sign = -1
-    if threshold==None:
+    if threshold is None:
         threshold = tf.get_average_OC_range()
     cut = TimeFrame(symbol=tf.symbol, period=tf.period)
     for element in tf.container:
@@ -265,15 +326,16 @@ def cut_by_datetime(tf, datetime_begin, datetime_end=None):
 def mutual_time_frames(tf1, tf2):
     res_tf1 = TimeFrame(symbol=tf1.symbol, period=tf1.period)
     res_tf2 = TimeFrame(symbol=tf2.symbol, period=tf2.period)
-    if len(tf1)<len(tf2):
+    iterator = None
+    if len(tf1) < len(tf2):
         for element in tf1.container:
-            res_iif = tf2.is_in_frame(element.DateTime)
+            res_iif, iterator = tf2.is_in_frame(element.DateTime, iterator)
             if res_iif is not None:
                 res_tf1.append(element)
-                res_tf2.append(resiif)
+                res_tf2.append(res_iif)
     else:
         for element in tf2.container:
-            res_iif = tf1.is_in_frame(element.DateTime)
+            res_iif, iterator = tf1.is_in_frame(element.DateTime, iterator)
             if res_iif is not None:
                 res_tf1.append(res_iif)
                 res_tf2.append(element)

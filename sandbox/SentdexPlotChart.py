@@ -119,7 +119,8 @@ def graphData(stock,MA1,MA2):
         ax1.spines['top'].set_color("#5998ff")
         ax1.spines['left'].set_color("#5998ff")
         ax1.spines['right'].set_color("#5998ff")
-        ax1.tick_params(axis='y', colors='w')
+        ax1.\
+            tick_params(axis='y', colors='w')
         plt.gca().yaxis.set_major_locator(mticker.MaxNLocator(prune='upper'))
         ax1.tick_params(axis='x', colors='w')
         plt.ylabel('Stock price and Volume')
