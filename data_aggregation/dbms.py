@@ -19,12 +19,13 @@ def load_stooq_db(path, cut_dy_date=None):
     div = len(files)/100
     for file in files:
         progress += 1
-        prt.print_progress(progress/div)
-        symbol = file.split("/")[len(file.split("/"))-1].split('.')[0]
-        if cut_dy_date is None:
-            res[symbol] = read_func(file, period=period, symbol=symbol)
-        else:
-            res[symbol] = fc.cut_by_datetime(read_func(file, period=period, symbol=symbol), cut_dy_date)
+        if 'txt' in file:
+            prt.print_progress(progress/div)
+            symbol = file.split("/")[len(file.split("/"))-1].split('.')[0]
+            if cut_dy_date is None:
+                res[symbol] = read_func(file, period=period, symbol=symbol)
+            else:
+                res[symbol] = fc.cut_by_datetime(read_func(file, period=period, symbol=symbol), cut_dy_date)
     prt.print_progress(100)
     print("\nParsing is finished")
     return res
