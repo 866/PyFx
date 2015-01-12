@@ -18,7 +18,7 @@ def correlation_data(file, func, coef_dict):
         f.write("def "+func+"():\n\tcoef_dict = {}\n\t")
         for key, value in coef_dict.items():
             f.write("coef_dict["+str(key)+"] = "+str(value)+"\n\t")
-        f.write("\treturn coef_dict")
+        f.write("return coef_dict")
 
 
 def database(file, func, db):

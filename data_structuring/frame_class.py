@@ -82,15 +82,16 @@ class TimeFrame(object):
 
     def get_hourly_distribution(self):
         """
-        Returns volatility(High-Low) distribution by days in list [0,1,2,3,...,23]
+        Returns volatility(Close-Open) distribution by days in list [0,1,2,3,...,23]
         Warning: works only with hourly ticks!
         """
+        import math
         h_vol = 24*[0]
         h_num = 24*[0]
         h_dist_vol = 24*[0]
         for elem in self.container:
             h_num[elem.DateTime.hour] += 1
-            h_vol[elem.DateTime.hour] += elem.getHL()
+            h_vol[elem.DateTime.hour] += math.fabs(elem.getCO())
         for i in range(24):
             if not h_num[i] == 0:
                 h_dist_vol[i] = h_vol[i]/h_num[i]
