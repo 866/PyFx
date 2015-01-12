@@ -17,7 +17,7 @@ def correlation_data(file, func, coef_dict):
         f.write("\n#Automatically generated script for correlation_dictionary\n\n\n")
         f.write("def "+func+"():\n\tcoef_dict = {}\n\t")
         for key, value in coef_dict.items():
-            f.write("\tcoef_dict["+str(key)+"] = "+str(value)+"\n")
+            f.write("coef_dict["+str(key)+"] = "+str(value)+"\n\t")
         f.write("\treturn coef_dict")
 
 
