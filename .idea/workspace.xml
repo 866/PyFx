@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c31be98c-77a3-4f1a-bed9-e715ff776565" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sandbox/mutual_frames.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainAPI/print.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/stooq_major_daily/loadRenamed.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/stooq_major_daily/load.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/EURUSD1.csv" afterPath="$PROJECT_DIR$/sandbox/EURUSD1.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainAPI/EURUSD1440big.csv" afterPath="$PROJECT_DIR$/mainAPI/EURUSD1440big.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/EURUSD1440big.csv" afterPath="$PROJECT_DIR$/sandbox/EURUSD1440big.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/SentdexPlotChart.py" afterPath="$PROJECT_DIR$/sandbox/SentdexPlotChart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_aggregation/dbms.py" afterPath="$PROJECT_DIR$/data_aggregation/dbms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_structuring/frame_class.py" afterPath="$PROJECT_DIR$/data_structuring/frame_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processing/math.py" afterPath="$PROJECT_DIR$/processing/math.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,24 +32,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SentdexPlotChart.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sandbox/SentdexPlotChart.py">
+      <file leaf-file-name="storing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_structuring/storing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3923706" vertical-offset="3251" max-vertical-offset="3870">
-              <caret line="218" column="26" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="626" max-vertical-offset="1062">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_aggregation/dbms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="630">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -60,10 +45,9 @@
       <file leaf-file-name="frame_class.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_structuring/frame_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="2016">
-              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="2106">
+              <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
               <folding>
-                <element signature="e#155#306#0" expanded="false" />
                 <element signature="e#339#365#0" expanded="false" />
                 <element signature="e#399#425#0" expanded="false" />
                 <element signature="e#467#504#0" expanded="false" />
@@ -78,60 +62,70 @@
                 <element signature="e#1310#1460#1" expanded="false" />
                 <element signature="e#1913#2432#0" expanded="false" />
                 <element signature="e#1913#2061#1" expanded="false" />
-                <element signature="e#2481#2971#0" expanded="false" />
-                <element signature="e#2481#2626#1" expanded="false" />
-                <element signature="e#3657#4156#0" expanded="false" />
-                <element signature="e#3657#3807#1" expanded="false" />
-                <element signature="e#4208#5109#0" expanded="false" />
-                <element signature="e#4208#4385#1" expanded="false" />
-                <element signature="e#5154#5472#0" expanded="false" />
-                <element signature="e#5520#5935#0" expanded="false" />
-                <element signature="e#5971#6074#0" expanded="false" />
-                <element signature="e#6110#6213#0" expanded="false" />
-                <element signature="e#6249#6351#0" expanded="false" />
-                <element signature="e#6387#6491#0" expanded="false" />
-                <element signature="e#6528#6634#0" expanded="false" />
-                <element signature="e#6671#6778#0" expanded="false" />
-                <element signature="e#6833#7717#0" expanded="false" />
-                <element signature="e#6833#7141#1" expanded="false" />
-                <element signature="e#8883#9229#0" expanded="false" />
-                <element signature="e#9262#9437#0" expanded="false" />
-                <element signature="e#9492#9704#0" expanded="false" />
-                <element signature="e#9759#9944#0" expanded="false" />
-                <element signature="e#10010#10300#0" expanded="false" />
-                <element signature="e#10340#11005#0" expanded="false" />
+                <element signature="e#2481#3004#0" expanded="false" />
+                <element signature="e#2481#2628#1" expanded="false" />
+                <element signature="e#3690#4189#0" expanded="false" />
+                <element signature="e#3690#3840#1" expanded="false" />
+                <element signature="e#4241#5142#0" expanded="false" />
+                <element signature="e#4241#4418#1" expanded="false" />
+                <element signature="e#5187#5505#0" expanded="false" />
+                <element signature="e#5553#5968#0" expanded="false" />
+                <element signature="e#6004#6107#0" expanded="false" />
+                <element signature="e#6143#6246#0" expanded="false" />
+                <element signature="e#6282#6384#0" expanded="false" />
+                <element signature="e#6420#6524#0" expanded="false" />
+                <element signature="e#6561#6667#0" expanded="false" />
+                <element signature="e#6704#6811#0" expanded="false" />
+                <element signature="e#6866#7750#0" expanded="false" />
+                <element signature="e#6866#7174#1" expanded="false" />
+                <element signature="e#8916#9262#0" expanded="false" />
+                <element signature="e#9295#9470#0" expanded="false" />
+                <element signature="e#9525#9737#0" expanded="false" />
+                <element signature="e#9792#9977#0" expanded="false" />
+                <element signature="e#10043#10333#0" expanded="false" />
+                <element signature="e#10373#11038#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EURUSD60.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/EURUSD60.csv">
+      <file leaf-file-name="candle_class.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36972">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="846">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainAPI/print.py">
+      <file leaf-file-name="dbms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_aggregation/dbms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="198">
-              <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="630">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mutual_frames.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/mutual_frames.py">
+      <file leaf-file-name="ticks_csv_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="360">
-              <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2307" max-vertical-offset="3078">
+              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="math.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/processing/math.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45327103" vertical-offset="742" max-vertical-offset="1422">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,17 +163,21 @@
         <option value="$PROJECT_DIR$/sandbox/stooqdownload.py" />
         <option value="$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py" />
         <option value="$PROJECT_DIR$/sandbox/mutual_frames.py" />
-        <option value="$PROJECT_DIR$/mainAPI/print.py" />
-        <option value="$PROJECT_DIR$/data_aggregation/dbms.py" />
         <option value="$PROJECT_DIR$/sandbox/SentdexPlotChart.py" />
-        <option value="$PROJECT_DIR$/processing/math.py" />
         <option value="$PROJECT_DIR$/data_structuring/frame_class.py" />
+        <option value="$PROJECT_DIR$/mainAPI/print.py" />
+        <option value="$PROJECT_DIR$/x.py" />
+        <option value="$PROJECT_DIR$/data_structuring/storing.py" />
+        <option value="$PROJECT_DIR$/data_aggregation/dbms.py" />
+        <option value="$PROJECT_DIR$/processing/math.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="744" />
+    <option name="x" value="-1" />
+    <option name="y" value="-1" />
+    <option name="width" value="1368" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -208,7 +206,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -220,7 +218,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,64 +246,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mainAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data_structuring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyFx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="data_aggregation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyFx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyFx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stooq_major_daily" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyFx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyFx">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="processing">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -320,6 +307,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -589,25 +577,37 @@
       <option name="project" value="LOCAL" />
       <updated>1419519088778</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Several additions, including working with correlation">
+      <created>1420477285464</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1420477285464</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Stooq DB were added. Store functionality. New script load.py">
+      <created>1421006369655</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1421006369655</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="744" extended-state="0" />
+    <frame x="-1" y="-1" width="1368" height="749" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23900293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.238653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6390169" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36996904" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.281106" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32872504" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -621,17 +621,17 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32872504" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6390169" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3637771" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3686636" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33956388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27863777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23900293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.238653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -657,7 +657,9 @@
     </option>
     <MESSAGE value="frame_class added" />
     <MESSAGE value="Plotting added 2 sandbox, added several functions for frame_class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Plotting added 2 sandbox, added several functions for frame_class" />
+    <MESSAGE value="Several additions, including working with correlation" />
+    <MESSAGE value="Stooq DB were added. Store functionality. New script load.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stooq DB were added. Store functionality. New script load.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,29 +669,24 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sandbox/stooqdownload.py">
+    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="648">
-          <caret line="1" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1983" max-vertical-offset="3078">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/__init__.py">
+    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="126">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/EURUSD_D.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="34002">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1983" max-vertical-offset="3078">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -965,38 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="705">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing/math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.08723748" vertical-offset="108" max-vertical-offset="756">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2707" max-vertical-offset="3078">
-          <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_aggregation/dbms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="630">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/stooqdownload.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
@@ -1004,30 +969,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPI/print.py">
+    <entry file="file://$PROJECT_DIR$/sandbox/SentdexPlotChart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3251" max-vertical-offset="3870">
+          <caret line="218" column="26" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/mutual_frames.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+        <state vertical-scroll-proportion="0.20355412" vertical-offset="0" max-vertical-offset="619">
           <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainAPI/print.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08723748" vertical-offset="0" max-vertical-offset="619">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD60.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36972">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_structuring/candle_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_structuring/frame_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="2016">
-          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="2106">
+          <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
           <folding>
-            <element signature="e#155#306#0" expanded="false" />
             <element signature="e#339#365#0" expanded="false" />
             <element signature="e#399#425#0" expanded="false" />
             <element signature="e#467#504#0" expanded="false" />
@@ -1042,45 +1024,63 @@
             <element signature="e#1310#1460#1" expanded="false" />
             <element signature="e#1913#2432#0" expanded="false" />
             <element signature="e#1913#2061#1" expanded="false" />
-            <element signature="e#2481#2971#0" expanded="false" />
-            <element signature="e#2481#2626#1" expanded="false" />
-            <element signature="e#3657#4156#0" expanded="false" />
-            <element signature="e#3657#3807#1" expanded="false" />
-            <element signature="e#4208#5109#0" expanded="false" />
-            <element signature="e#4208#4385#1" expanded="false" />
-            <element signature="e#5154#5472#0" expanded="false" />
-            <element signature="e#5520#5935#0" expanded="false" />
-            <element signature="e#5971#6074#0" expanded="false" />
-            <element signature="e#6110#6213#0" expanded="false" />
-            <element signature="e#6249#6351#0" expanded="false" />
-            <element signature="e#6387#6491#0" expanded="false" />
-            <element signature="e#6528#6634#0" expanded="false" />
-            <element signature="e#6671#6778#0" expanded="false" />
-            <element signature="e#6833#7717#0" expanded="false" />
-            <element signature="e#6833#7141#1" expanded="false" />
-            <element signature="e#8883#9229#0" expanded="false" />
-            <element signature="e#9262#9437#0" expanded="false" />
-            <element signature="e#9492#9704#0" expanded="false" />
-            <element signature="e#9759#9944#0" expanded="false" />
-            <element signature="e#10010#10300#0" expanded="false" />
-            <element signature="e#10340#11005#0" expanded="false" />
+            <element signature="e#2481#3004#0" expanded="false" />
+            <element signature="e#2481#2628#1" expanded="false" />
+            <element signature="e#3690#4189#0" expanded="false" />
+            <element signature="e#3690#3840#1" expanded="false" />
+            <element signature="e#4241#5142#0" expanded="false" />
+            <element signature="e#4241#4418#1" expanded="false" />
+            <element signature="e#5187#5505#0" expanded="false" />
+            <element signature="e#5553#5968#0" expanded="false" />
+            <element signature="e#6004#6107#0" expanded="false" />
+            <element signature="e#6143#6246#0" expanded="false" />
+            <element signature="e#6282#6384#0" expanded="false" />
+            <element signature="e#6420#6524#0" expanded="false" />
+            <element signature="e#6561#6667#0" expanded="false" />
+            <element signature="e#6704#6811#0" expanded="false" />
+            <element signature="e#6866#7750#0" expanded="false" />
+            <element signature="e#6866#7174#1" expanded="false" />
+            <element signature="e#8916#9262#0" expanded="false" />
+            <element signature="e#9295#9470#0" expanded="false" />
+            <element signature="e#9525#9737#0" expanded="false" />
+            <element signature="e#9792#9977#0" expanded="false" />
+            <element signature="e#10043#10333#0" expanded="false" />
+            <element signature="e#10373#11038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/EURUSD60.csv">
+    <entry file="file://$PROJECT_DIR$/data_structuring/storing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36972">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="626" max-vertical-offset="1062">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/SentdexPlotChart.py">
+    <entry file="file://$PROJECT_DIR$/data_aggregation/dbms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3923706" vertical-offset="3251" max-vertical-offset="3870">
-          <caret line="218" column="26" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="630">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_aggregation/ticks_csv_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2307" max-vertical-offset="3078">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45327103" vertical-offset="742" max-vertical-offset="1422">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

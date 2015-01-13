@@ -50,6 +50,8 @@ def print_current_situation_daily(db):
             prob = len(fc.cut_by_OC_point(item, oc_today)) / len(item)
             if prob < .2:
                 prob_str = "\033[91m{0:.2f}".format(prob)+"\033[0m"
+            elif prob > .8:
+                prob_str = "\033[92m{0:.2f}".format(prob)+"\033[0m"
             else:
                 prob_str = "{0:.2f}".format(prob)
             print(str(key)+("     {0:f}      {1:f}       {2:f}     "+prob_str).format(oc_avr, oc_today, oc_today/oc_avr))
