@@ -3,7 +3,7 @@ import data_structuring.frame_class as fc
 import mainAPI.print as prt
 
 
-def find_correlation_by_C(tf1, tf2, shift=0): #shift is the shift of the tf1
+def find_correlation_by_C(tf1, tf2, shift=0): #shift is the shift of tf1
     tf1, tf2 = fc.mutual_time_frames(tf1, tf2)
     if not (len(tf1) == 0 or len(tf2) == 0):
         if shift == 0:
@@ -12,6 +12,56 @@ def find_correlation_by_C(tf1, tf2, shift=0): #shift is the shift of the tf1
             return np.corrcoef(tf1.get_C_list()[shift:], tf2.get_C_list()[:-shift])[0][1]
     else:
         return None
+
+def find_correlation_by_OHLC(tf1, tf2, shift=0): #shift is the shift of tf1
+    tf1, tf2 = fc.mutual_time_frames(tf1, tf2)
+    if not (len(tf1) == 0 or len(tf2) == 0):
+        if shift == 0:
+            tf1_list = tf1.get_O_list()+tf1.get_H_list()+tf1.get_L_list()+tf1.get_C_list()
+            tf2_list = tf2.get_O_list()+tf2.get_H_list()+tf2.get_L_list()+tf2.get_C_list()
+        else:
+            tf1_list = tf1.get_O_list()[shift:]+tf1.get_H_list()[shift:]+tf1.get_L_list()[shift:]+tf1.get_C_list()[shift:]
+            tf2_list = tf2.get_O_list()[:-shift]+tf2.get_H_list()[:-shift]+tf2.get_L_list()[:-shift]+tf2.get_C_list()[:-shift]
+        return np.corrcoef(tf1_list, tf2_list)[0][1]
+    else:
+        return None
+
+def find_fragment_in_tf_by_C(fragment, tf, threshold = 0.9):
+    res = {}
+    fragc = fragment.get_C_list()
+    framec = tf.get_C_list()
+    len_frag, len_frame = len(fragc), len(framec)
+    if len_frame<len_frag:
+        res = None
+    else:
+        for i in range(len_frame-len_frag):
+            corr_coef = np.corrcoef(fragc, framec[i:i+len_frag])[0][1]
+            if corr_coef >= threshold:
+                res[tf.container[i].DateTime] = corr_coef
+    return res
+
+def find_fragment_in_tf_by_OHLC(fragment, tf, threshold = 0.95):
+    res = {}
+    fragc, framec = [], []
+    for i in range(len(fragment)):
+        fragc.append(fragment.container[i].Open)
+        fragc.append(fragment.container[i].High)
+        fragc.append(fragment.container[i].Low)
+        fragc.append(fragment.container[i].Close)
+    for i in range(len(tf)):
+        framec.append(tf.container[i].Open)
+        framec.append(tf.container[i].High)
+        framec.append(tf.container[i].Low)
+        framec.append(tf.container[i].Close)
+    len_frag, len_frame = len(fragc), len(framec)
+    if len_frame < len_frag:
+        res = None
+    else:
+        for i in range(int((len_frame-len_frag)/4)):
+            corr_coef = np.corrcoef(fragc, framec[i*4:i*4+len_frag])[0][1]
+            if corr_coef >= threshold:
+                res[tf.container[i].DateTime] = corr_coef
+    return res
 
 
 def find_correlation_dict_by_C(db, shift=0):

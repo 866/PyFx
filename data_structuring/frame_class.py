@@ -209,6 +209,12 @@ class TimeFrame(object):
             res.append(element.Close)
         return res
 
+    def get_Time_list(self):
+        res = []
+        for element in self.container:
+            res.append(element.DateTime)
+        return res
+
     def get_CO_list(self):
         res = []
         for element in self.container:
