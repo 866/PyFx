@@ -15,7 +15,6 @@ def plot_distribution(dist_list, x_axis=None):
     plt.show()
 
 def plot_chart(*tfs, norm=True, realtime=True):
-    import datetime as dt
     import matplotlib.dates as mdt
     fig, ax = plt.subplots()
     if len(tfs) == 1:
@@ -24,7 +23,6 @@ def plot_chart(*tfs, norm=True, realtime=True):
         ax.xaxis_date()
         plt.title(tfs[0].symbol + " chart")
     else:
-        import numpy as np
         for tf in tfs:
             if realtime is True:
                 x = tf.get_Time_list()
@@ -34,7 +32,7 @@ def plot_chart(*tfs, norm=True, realtime=True):
             if norm is True:
                 y -= y.min()
                 y /= y.max()
-            plt.plot(x,y,label=tf.symbol)
+            plt.plot(x, y, label=tf.symbol)
             plt.title("Charts graph")
     plt.legend(loc='upper center', shadow=True)
     plt.xlabel("Time")

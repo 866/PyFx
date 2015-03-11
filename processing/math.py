@@ -63,6 +63,19 @@ def find_fragment_in_tf_by_OHLC(fragment, tf, threshold = 0.95):
                 res[tf.container[i].DateTime] = corr_coef
     return res
 
+def find_pattern_profitability(fragment, tf, days, threshold=0.95):
+    res = {}
+    found = find_fragment_in_tf_by_OHLC(fragment, tf, threshold = 0.95)
+    for date in found.keys():
+        dummy, itr = tf.is_in_frame(date)
+        profit = 0
+        try:
+            for i in range(days):
+                candle = next(itr)
+                profit += candle.getCO()
+            res[date] = profit
+        except StopIteration:
+            pass
 
 def find_correlation_dict_by_C(db, shift=0):
     corr_dict = {}
