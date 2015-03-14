@@ -17,7 +17,7 @@ def plot_distribution(dist_list, x_axis=None):
 def plot_chart(*tfs, norm=True, realtime=True):
     import matplotlib.dates as mdt
     fig, ax = plt.subplots()
-    if len(tfs) == 1:
+    if len(tfs) == 1 and norm is True:
         y = [(mdt.date2num(candle.DateTime), candle.Open, candle.Close, candle.High, candle.Low) for candle in tfs[0].container]
         candlestick(ax, y, width=0.4, colorup='r', colordown='b')
         ax.xaxis_date()
