@@ -14,7 +14,7 @@ def plot_distribution(dist_list, x_axis=None):
     fig.autofmt_xdate()
     plt.show()
 
-def plot_chart(*tfs, norm=True, realtime=True):
+def plot_chart(*tfs, norm=True, realtime=True, markers = None):
     import matplotlib.dates as mdt
     fig, ax = plt.subplots()
     if len(tfs) == 1 and norm is True:
@@ -22,6 +22,13 @@ def plot_chart(*tfs, norm=True, realtime=True):
         candlestick(ax, y, width=0.4, colorup='r', colordown='b')
         ax.xaxis_date()
         plt.title(tfs[0].symbol + " chart")
+        if markers is not None:
+            marker_y, marker_x = [], []
+            for elem in tfs[0].container:
+                if elem.DateTime in markers:
+                    marker_y.append(.5*(elem.Open+elem.Close))
+                    marker_x.append(mdt.date2num(elem.DateTime))
+            plt.plot(marker_x, marker_y, 'gD')
     else:
         for tf in tfs:
             if realtime is True:

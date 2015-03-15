@@ -1,10 +1,14 @@
 import data.stooq_major_daily.load as load
 import mainAPI.plotting as plot
 import datetime as dt
+import processing.math as mt
 import data_structuring.frame_class as fc
-frag = fc.cut_by_datetime(db['eurusd'],dt.datetime(2010,2,1),dt.datetime(2010,2,15))
-db = load.db_last_5years()
-frag = fc.cut_by_datetime(db['eurusd'],dt.datetime(2010,2,1),dt.datetime(2010,2,9))
-frag1 = fc.cut_by_datetime(db['eurusd'],dt.datetime(2010,12,3),dt.datetime(2010,12,17))
-frag2 = fc.cut_by_datetime(db['eurusd'],dt.datetime(2009,1,26),dt.datetime(2009,2,10))
-plot.plot_chart(frag, frag1, frag2)
+symbol = 'gbpusd'
+db = load.db_last_year()
+frag = fc.cut_by_datetime(db['eurusd'], dt.datetime(2014,5,6),dt.datetime(2014,5,8))
+x = mt.find_pattern_profitability(frag, db[symbol], 8, 0.86)
+print("Total Profit/Num: ",sum(x.values()), len(x))
+print("Ratio: ",sum(x.values())/len(x))
+print("Max/Min: ",max(x.values()), min(x.values()))
+plot.plot_chart(db[symbol], markers=x.keys())
+

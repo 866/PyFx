@@ -68,14 +68,14 @@ def find_pattern_profitability(fragment, tf, days, threshold=0.9):
     found = find_fragment_in_tf_by_OHLC(fragment, tf, threshold)
     for date in found.keys():
         dummy, itr = tf.is_in_frame(date)
-        profit = 0
         try:
-            for i in range(len(fragment)):
+            for i in range(len(fragment)-1):
                 next(itr)
-            for i in range(days):
+            open_price = next(itr).Open
+            for i in range(days-1):
                 candle = next(itr)
-                profit += candle.getCO()
-            res[date] = profit
+            close_price = next(itr).Open
+            res[date] = close_price-open_price
         except StopIteration:
             pass
     return res
@@ -95,14 +95,12 @@ def find_correlation_dict_by_C(db, shift=0):
     print("\nCalculating is finished")
     return corr_dict
 
-
 def find_best_corr_in_dict(corr_dict, threshold=0.95):
     best_corr_dict = {}
     for key, value in corr_dict.items():
         if value > threshold or value < -threshold:
             best_corr_dict[key] = value
     return best_corr_dict
-
 
 def print_current_situation_daily(db):
     import data_aggregation.fetch as fetch
