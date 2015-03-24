@@ -1,4 +1,4 @@
-import processing.math as mt
+import processing.mathalgs as mt
 import data_structuring.frame_class as fc
 import data_aggregation.dbms as dbms
 import data_aggregation.ticks_csv_parser as tcp

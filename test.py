@@ -1,7 +1,7 @@
 import data.stooq_major_daily.load as load
 import mainAPI.plotting as plot
 import datetime as dt
-import processing.math as mt
+import processing.mathalgs as mt
 import data_structuring.frame_class as fc
 symbol = 'gbpusd'
 db = load.db_last_year()
@@ -10,5 +10,4 @@ x = mt.find_pattern_profitability(frag, db[symbol], 8, 0.86)
 print("Total Profit/Num: ",sum(x.values()), len(x))
 print("Ratio: ",sum(x.values())/len(x))
 print("Max/Min: ",max(x.values()), min(x.values()))
-plot.plot_chart(db[symbol], markers=x.keys())
-
+mt.print_current_situation_daily(db)

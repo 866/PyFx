@@ -258,6 +258,16 @@ class TimeFrame(object):
         else:
             return element, itr
 
+    def get_local_mm_tf(self):
+        lows_tf = TimeFrame(symbol=self.symbol, period=self.period)
+        highs_tf = TimeFrame(symbol=self.symbol, period=self.period)
+        for i in range(1, len(self.container)-1):
+            if self.container[i-1].High<=self.container[i].High>=self.container[i+1].High:
+                highs_tf.append(self.container[i])
+            if self.container[i-1].Low>=self.container[i].Low<=self.container[i+1].Low:
+                lows_tf.append(self.container[i])
+        return lows_tf, highs_tf
+
     def print_description(self):
         print("\tTimeframe data description")
         print("\tSymbol: " + self.symbol)
